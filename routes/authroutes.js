@@ -1,12 +1,10 @@
 const express = require('express');
 const router = express.Router();
-
-// PENTING: Pastikan nama file controller-nya sesuai. 
-// Jika file Anda bernama 'authcontroller.js', maka tulisannya harus persis seperti itu.
-const authController = require('../controllers/authcontroller'); 
-
-// Definisikan endpoint
+const authController = require('../controllers/authcontroller.js');
+// Endpoint Register
 router.post('/register', authController.register);
+
+// Endpoint Login
 router.post('/login', authController.login);
 
 module.exports = router;
